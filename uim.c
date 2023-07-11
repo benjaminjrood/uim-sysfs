@@ -359,7 +359,7 @@ int st_uart_config(unsigned char install)
 			/* Forming the packet for Change speed command */
 			cmd.uart_prefix = HCI_COMMAND_PKT;
 			cmd.hci_hdr.opcode = HCI_HDR_OPCODE;
-			cmd.hci_hdr.plen = sizeof(unsigned long);
+			cmd.hci_hdr.plen = sizeof(uint32_t);
 			cmd.speed = cust_baud_rate;
 
 			/* Writing the change speed command to the UART
